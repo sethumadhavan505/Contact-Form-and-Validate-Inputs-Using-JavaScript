@@ -1,4 +1,4 @@
-# ✍️ Form Validation in JavaScript - For Absolute Beginners
+# ✍️ Form Validation in JavaScript
 
 Simple client side form validation. Check required, length, email and password match
 
