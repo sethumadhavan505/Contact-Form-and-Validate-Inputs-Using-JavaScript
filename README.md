@@ -1,5 +1,4 @@
 # ✍️ Form Validation in JavaScript
-
 Simple client side form validation. Check required, length, email and password match
 
 ## Project Specifications
