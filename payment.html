@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ODRS Payment</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container payment-box">
+
+<h2>ODRS TEAM PAYMENT</h2>
+
+<img src="Fam.png" alt="Payment QR" class="qr-img">
+
+<button id="payBtn">Submit</button>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init("2HLt93pZy8mj117BT");
+
+document.getElementById("payBtn").addEventListener("click", function () {
+
+const name = localStorage.getItem("odrsName");
+const email = localStorage.getItem("odrsEmail");
+const dept = localStorage.getItem("odrsDept");
+
+const templateParams = {
+name: name,
+email: email,
+dept: dept
+};
+
+// Email to ODRS TEAM
+emailjs.send(
+"service_zxt5qcd",
+"template_w77svvi",
+templateParams
+)
+
+.then(function () {
+
+// Auto Reply to Student
+return emailjs.send(
+"service_zxt5qcd",
+"template_5as3c6f",
+templateParams
+);
+
+})
+
+.then(function () {
+
+alert("ODRS TEAM WILL CONTACT YOU");
+
+localStorage.clear();
+
+window.location.href = "index.html";
+
+})
+
+.catch(function (error) {
+
+console.log(error);
+
+alert("Failed to send email");
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
