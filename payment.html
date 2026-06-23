@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ODRS Payment</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -11,11 +12,22 @@
 
 <div class="container payment-box">
 
+```
 <h2>ODRS TEAM PAYMENT</h2>
 
 <img src="Fam.png" alt="Payment QR" class="qr-img">
 
-<button id="payBtn">Submit</button>
+<p>Please scan the QR code and complete the payment.</p>
+
+<div class="acknowledgement">
+    <input type="checkbox" id="agree">
+    <label for="agree">
+        I have completed the payment and provided correct details.
+    </label>
+</div>
+
+<button id="payBtn" disabled>Submit</button>
+```
 
 </div>
 
@@ -25,53 +37,62 @@
 
 emailjs.init("2HLt93pZy8mj117BT");
 
+const checkbox = document.getElementById("agree");
+const submitBtn = document.getElementById("payBtn");
+
+checkbox.addEventListener("change", function () {
+    submitBtn.disabled = !this.checked;
+});
+
 document.getElementById("payBtn").addEventListener("click", function () {
 
-const name = localStorage.getItem("odrsName");
-const email = localStorage.getItem("odrsEmail");
-const dept = localStorage.getItem("odrsDept");
+    const name = localStorage.getItem("odrsName");
+    const email = localStorage.getItem("odrsEmail");
+    const dept = localStorage.getItem("odrsDept");
 
-const templateParams = {
-name: name,
-email: email,
-dept: dept
-};
+    const templateParams = {
+        name: name,
+        email: email,
+        dept: dept
+    };
 
-// Email to ODRS TEAM
-emailjs.send(
-"service_zxt5qcd",
-"template_w77svvi",
-templateParams
-)
+    // Send booking details to ODRS
 
-.then(function () {
+    emailjs.send(
+        "service_zxt5qcd",
+        "template_w77svvi",
+        templateParams
+    )
 
-// Auto Reply to Student
-return emailjs.send(
-"service_zxt5qcd",
-"template_5as3c6f",
-templateParams
-);
+    .then(function () {
 
-})
+        // Send confirmation email to student
 
-.then(function () {
+        return emailjs.send(
+            "service_zxt5qcd",
+            "template_5as3c6f",
+            templateParams
+        );
 
-alert("ODRS TEAM WILL CONTACT YOU");
+    })
 
-localStorage.clear();
+    .then(function () {
 
-window.location.href = "index.html";
+        alert("ODRS TEAM WILL CONTACT YOU");
 
-})
+        localStorage.clear();
 
-.catch(function (error) {
+        window.location.href = "index.html";
 
-console.log(error);
+    })
 
-alert("Failed to send email");
+    .catch(function (error) {
 
-});
+        console.error(error);
+
+        alert("Failed to send email. Please try again.");
+
+    });
 
 });
 
