@@ -163,3 +163,29 @@ width: 100%;
 }
 
 }
+
+.acknowledgement {
+margin-top: 20px;
+text-align: left;
+padding: 12px;
+background: #f8f9fa;
+border: 1px solid #ddd;
+border-radius: 8px;
+}
+
+.acknowledgement input {
+margin-right: 8px;
+transform: scale(1.2);
+cursor: pointer;
+}
+
+.acknowledgement label {
+font-size: 14px;
+color: #333;
+cursor: pointer;
+}
+
+.payment-box button:disabled {
+background: #bdbdbd;
+cursor: not-allowed;
+}
