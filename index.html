@@ -34,10 +34,36 @@
         id="phone"
         placeholder="Enter Your Mobile Number"
         maxlength="10"
-    >
+        pattern="[0-9]{10}"
+        required>
     <small>Error message</small>
 </div>
-  
+
+<div class="form-control">
+    <label for="offer">Select Offer</label>
+    <select id="offer">
+        <option value="">Choose a Service</option>
+        <option value="SkillRack Program Count - ₹800">
+            SkillRack Program Count - ₹800
+        </option>
+        <option value="SkillRack Test - ₹50">
+            SkillRack Test - ₹50
+        </option>
+        <option value="Manual Writing - ₹500">
+            Manual Writing - ₹500
+        </option>
+        <option value="Online Certifications - ₹100">
+            Online Certifications - ₹100
+        </option>
+        <option value="Project Works - ₹150 to ₹300">
+            Project Works - ₹150 to ₹300
+        </option>
+        <option value="Record Works - ₹300 to ₹400">
+            Record Works - ₹300 to ₹400
+        </option>
+    </select>
+</div>
+
 <div class="form-control">
 <label>Branch & Dept</label>
 <input type="text" id="dept" placeholder="Fill Your Detail">
