@@ -119,6 +119,22 @@ transition: 0.3s;
 background-color: #2980b9;
 }
 
+.form-control select {
+border: 2px solid #f0f0f0;
+border-radius: 4px;
+display: block;
+width: 100%;
+padding: 12px;
+font-size: 14px;
+background: #fff;
+color: #555;
+}
+
+.form-control select:focus {
+outline: none;
+border-color: #3498db;
+}
+
 /* PAYMENT PAGE */
 
 .payment-box {
