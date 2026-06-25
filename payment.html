@@ -46,11 +46,13 @@ document.getElementById("payBtn").addEventListener("click", function () {
 
     const name = localStorage.getItem("odrsName");
     const email = localStorage.getItem("odrsEmail");
+    const phone = localStorage.getItem("odrsPhone");
     const dept = localStorage.getItem("odrsDept");
 
     const templateParams = {
         name: name,
         email: email,
+        phone: phone,
         dept: dept
     };
 
