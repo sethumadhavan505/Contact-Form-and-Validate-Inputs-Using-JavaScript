@@ -25,8 +25,11 @@
     </label>
 </div>
 
-<button id="payBtn" disabled>Submit</button>
-
+<div class="button-group">
+    <button type="button" id="backBtn">Back</button>
+    <button id="payBtn" disabled>Submit</button>
+</div>
+    
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -38,6 +41,12 @@ emailjs.init("2HLt93pZy8mj117BT");
 const checkbox = document.getElementById("agree");
 const submitBtn = document.getElementById("payBtn");
 
+const backBtn = document.getElementById("backBtn");
+    
+backBtn.addEventListener("click", function () {
+    window.location.href = "index.html";
+});
+    
 checkbox.addEventListener("change", function () {
     submitBtn.disabled = !this.checked;
 });
