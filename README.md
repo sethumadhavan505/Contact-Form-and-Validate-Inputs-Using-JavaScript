@@ -68,6 +68,7 @@ ODRS-Booking/
 ├── style.css
 ├── Fam.png
 ├── img1.jpg
+├── LICENSE
 └── README.md
 ```
 
@@ -137,4 +138,6 @@ https://github.com/sethumadhavan505
 
 ## License
 
-This project is created for educational and service purposes under ODRS TEAM.
+This project was developed by ODRS TEAM for educational and service purposes.
+
+It is licensed under the MIT License. See the LICENSE file for more information.
