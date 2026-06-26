@@ -205,3 +205,47 @@ cursor: pointer;
 background: #bdbdbd;
 cursor: not-allowed;
 }
+
+/* Payment Page Button Group */
+
+.button-group {
+display: flex;
+gap: 10px;
+margin-top: 20px;
+}
+
+.button-group button {
+flex: 1;
+padding: 12px;
+font-size: 16px;
+border: none;
+border-radius: 5px;
+color: white;
+cursor: pointer;
+transition: 0.3s;
+}
+
+/* Back Button */
+
+#backBtn {
+background-color: #6c757d;
+}
+
+#backBtn:hover {
+background-color: #5a6268;
+}
+
+/* Submit Button */
+
+#payBtn {
+background-color: #3498db;
+}
+
+#payBtn:hover:not(:disabled) {
+background-color: #2980b9;
+}
+
+#payBtn:disabled {
+background-color: #bdbdbd;
+cursor: not-allowed;
+}
