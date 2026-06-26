@@ -6,8 +6,6 @@ Users can register for ODRS services, complete payment using a QR code, and rece
 
 🔗 **Live Website:** https://sethumadhavan505.github.io/Contact-Form-and-Validate-Inputs-Using-JavaScript/
 
-A professional booking and payment portal developed for ODRS TEAM.
-
 ---
 
 ## Features
