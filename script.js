@@ -29,11 +29,3 @@ localStorage.setItem('odrsDept', dept);
 window.location.href = 'payment.html';
 
 });
-
-/* Back Button */
-
-const backBtn = document.getElementById("backBtn");
-
-backBtn.addEventListener("click", function () {
-    window.location.href = "index.html";
-});
