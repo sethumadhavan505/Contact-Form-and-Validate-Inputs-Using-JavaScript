@@ -4,11 +4,11 @@ form.addEventListener('submit', function(e){
 
 e.preventDefault();
 
-const name = document.getElementById('name').value;
-const email = document.getElementById('email').value;
-const phone = document.getElementById('phone').value;
+const name = document.getElementById('name').value.trim();
+const email = document.getElementById('email').value.trim();
+const phone = document.getElementById('phone').value.trim();
 const offer = document.getElementById('offer').value;
-const dept = document.getElementById('dept').value;
+const dept = document.getElementById('dept').value.trim();
 
 if(name === '' || email === '' || phone === '' || offer === '' || dept === ''){
     alert('Please fill all details');
@@ -28,4 +28,12 @@ localStorage.setItem('odrsDept', dept);
 
 window.location.href = 'payment.html';
 
+});
+
+/* Back Button */
+
+const backBtn = document.getElementById("backBtn");
+
+backBtn.addEventListener("click", function () {
+    window.location.href = "index.html";
 });
