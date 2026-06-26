@@ -1,21 +1,138 @@
-# ✍️ Form Validation in JavaScript
-Simple client side form validation. Check required, length, email and password match
+# ODRS Booking Website
 
-## Project Specifications
+A professional booking and payment portal developed for **ODRS TEAM (One Day • One Revolution • One Solution)**.
 
-- Create form UI
-- Show error messages under specific inputs
-- checkRequired() to accept array of inputs
-- checkLength() to check min and max length
-- checkEmail() to validate email with regex
-- checkPasswordsMatch() to match confirm password
+Users can register for ODRS services, complete payment using a QR code, and receive instant email confirmations.
 
-## Error
+---
 
-![form-validator](https://user-images.githubusercontent.com/49324541/192125447-54382dc3-219d-4e4a-b9e5-80749b4d188c.png)
+## Features
 
-## Success
+✅ User Registration Form
 
-![form-validator-success](https://user-images.githubusercontent.com/49324541/192125461-6aebec6c-bfa9-4bb1-938f-3377639e2dac.png)
+✅ Name Validation
 
-## Please give this repo a ⭐ if you found it helpful.
+✅ Email Validation
+
+✅ Phone Number Validation
+
+✅ Offer Selection
+
+✅ Branch & Department Details
+
+✅ Payment QR Page
+
+✅ Payment Acknowledgement Checkbox
+
+✅ Back & Submit Buttons
+
+✅ Email Notification to ODRS Team
+
+✅ Automatic Confirmation Email to Students
+
+✅ Mobile Responsive Design
+
+---
+
+## Services Available
+
+* SkillRack Program Count – ₹800
+* SkillRack Test – ₹50
+* Manual Writing – ₹500
+* Online Certifications – ₹100
+* Project Works – ₹150 to ₹300
+* Record Works – ₹300 to ₹400
+
+---
+
+## Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript
+* EmailJS
+* GitHub Pages
+
+---
+
+## Project Structure
+
+```text
+ODRS-Booking/
+│
+├── index.html
+├── payment.html
+├── script.js
+├── style.css
+├── Fam.png
+├── img1.jpg
+└── README.md
+```
+
+## Booking Workflow
+
+1. User enters:
+
+   * Name
+   * Email
+   * Phone Number
+   * Service Required
+   * Branch & Department
+
+2. Clicks **Next**
+
+3. Redirected to Payment Page
+
+4. Scans QR Code and completes payment
+
+5. Checks acknowledgement checkbox
+
+6. Clicks **Submit**
+
+7. ODRS Team receives booking details via email
+
+8. Student receives confirmation email automatically
+
+---
+
+## EmailJS Integration
+
+This project uses EmailJS for:
+
+* Sending booking details to ODRS TEAM
+* Sending auto confirmation emails to users
+
+### Templates Used
+
+* Contact Template
+* Auto Reply Template
+
+---
+
+## ODRS TEAM
+
+**One Day • One Revolution • One Solution**
+
+Providing support for:
+
+* SkillRack Programs
+* SkillRack Tests
+* Manual Writing
+* Record Writing
+* Project Works
+* Online Certifications
+
+---
+
+## Author
+
+Sethu Madhavan P
+
+GitHub:
+https://github.com/sethumadhavan505
+
+---
+
+## License
+
+This project is created for educational and service purposes under ODRS TEAM.
