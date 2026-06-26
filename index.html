@@ -35,6 +35,7 @@
         placeholder="Enter Your Mobile Number"
         maxlength="10"
         pattern="[0-9]{10}"
+        oninput="this.value=this.value.replace(/[^0-9]/g,'')"
         required>
     <small>Error message</small>
 </div>
